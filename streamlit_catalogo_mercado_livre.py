@@ -50,7 +50,7 @@ if button:
     sellers_name = []
 
     for seller in sellers_id:
-        r = requests.get('https://api.mercadolibre.com/users/{}'.format(sellers_id[n]))
+        r = requests.get('https://api.mercadolibre.com/users/{}'.format(sellers_id[s]))
         sellers = r.json()
         sellers_name.append(sellers['nickname'])
         s = s + 1 
