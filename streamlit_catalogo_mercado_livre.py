@@ -34,4 +34,33 @@ if button:
         ids.append(catalogy['results'][i]['item_id'])
         i = i + 1
 
-    st.write(ids)
+    #Criando variavél para pegar os ids dos sellers 
+    n = 0 
+
+    sellers_id = []
+
+    for item in catalogy['results']:
+        sellers_id.append(catalogy['results'][n]['sellers_id'])
+        i = i + 1
+
+    #Criando variavél para pegar os nomes dos sellers 
+
+    s = 0 
+
+    sellers_name = []
+
+    for seller in sellers_id:
+        r = requests.get('https://api.mercadolibre.com/users/{}'.format(seller_id[n]))
+        sellers = r.json()
+        sellers_name.append(sellers['nickname'])
+        s = s + 1 
+    
+    #Criando o dataframe 
+    Dataset = pd.DataFrame()
+
+    #Colocando os dados 
+    dataset['Ids'] = ids 
+    dataset['Sellers'] = sellers_name
+
+    #Mostrando o dataset 
+    st.dataframe(dataset)
