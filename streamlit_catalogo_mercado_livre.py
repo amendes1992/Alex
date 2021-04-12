@@ -56,7 +56,7 @@ if button:
         s = s + 1 
     
     #Criando o dataframe 
-    Dataset = pd.DataFrame()
+    dataset = pd.DataFrame()
 
     #Colocando os dados 
     dataset['Ids'] = ids 
