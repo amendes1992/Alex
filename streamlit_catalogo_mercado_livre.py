@@ -45,15 +45,15 @@ if button:
 
     #Criando variavél para pegar os nomes dos sellers 
 
-    s = 0 
+    n = 0 
 
     sellers_name = []
 
     for seller in sellers_id:
-        r = requests.get('https://api.mercadolibre.com/users/{}'.format(sellers_id[s]))
+        r = requests.get('https://api.mercadolibre.com/users/{}'.format(sellers_id[n]))
         sellers = r.json()
         sellers_name.append(sellers['nickname'])
-        s = s + 1 
+        n = n + 1 
     
     #Criando o dataframe 
     dataset = pd.DataFrame()
