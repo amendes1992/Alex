@@ -64,3 +64,7 @@ if button:
 
     #Mostrando o dataset 
     st.dataframe(dataset)
+    
+    #Mostrando só os ids 
+    st.write("Apenas os IDs")
+    st.write(ids)
