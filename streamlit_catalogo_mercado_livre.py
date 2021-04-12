@@ -40,7 +40,7 @@ if button:
     sellers_id = []
 
     for item in catalogy['results']:
-        sellers_id.append(catalogy['results'][n]['sellers_id'])
+        sellers_id.append(catalogy['results'][n]['seller_id'])
         i = i + 1
 
     #Criando variavél para pegar os nomes dos sellers 
