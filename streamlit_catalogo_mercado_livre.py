@@ -37,7 +37,7 @@ if button:
     #Fazendo a busca dos id 
     
     #Mostrando o total de anúncios 
-    st.write("Há o total de {} de anúncios deste produto no catálogo".format(catalogy['paging']['total']))
+    st.write("Há o total de **{}** de anúncios deste produto no catálogo".format(catalogy['paging']['total']))
     #Criando variavél e lista 
     ids = []
 
