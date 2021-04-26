@@ -73,4 +73,4 @@ if button:
     b64 = base64.b64encode(csv.encode()).decode()
     href = f'<a href="data:file/csv;base64,{b64}">Faça download do arquivo</a>'
     
-   st.write(href)
+    st.write(href)
