@@ -2,6 +2,7 @@
 import pandas as pd 
 import requests
 import streamlit as st 
+import base64
 
 # Criando a aplicação 
 st.title("Buscador de ID de anúncios dentro do Catalogo do Mercado Livre")
