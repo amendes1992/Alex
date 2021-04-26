@@ -80,3 +80,4 @@ if button:
     
     #Fazendo o link para download
     get_dataset(dataset)
+    f'<a href="data:file/csv;base64,{b64}">Download</a>'
