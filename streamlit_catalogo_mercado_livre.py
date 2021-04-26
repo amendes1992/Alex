@@ -27,7 +27,7 @@ if button:
     
     #Mostrando o total de anúncios 
     st.write("Há o total de anúncios deste produto no catalogo")
-    st.write(catalogy['paging']['Total']
+    st.write(catalogy['paging']['Total'])
     #Criando variavél e lista 
     ids = []
 
