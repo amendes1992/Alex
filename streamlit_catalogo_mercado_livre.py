@@ -4,6 +4,16 @@ import requests
 import streamlit as st 
 import base64
 
+## Função 
+
+#Download do arquivo 
+def get_dataset(df):
+    csv = df.to_csv(index=False)
+    b64 = base64.b64encode(csv.encode()).decode()
+    href = f'<a href="data:file/csv;base64,{b64}">Download</a>
+    
+    return href
+
 # Criando a aplicação 
 st.title("Buscador de ID de anúncios dentro do Catalogo do Mercado Livre")
 
@@ -69,8 +79,4 @@ if button:
     st.dataframe(dataset)
     
     #Fazendo o link para download
-    csv = dataset.to_csv(index=False)
-    b64 = base64.b64encode(csv.encode()).decode()
-    href = f'<a href="data:file/csv;base64,{b64}">Faça download do arquivo</a>'
-    
-    st.write(href)
+   get_dataset(dataset)
