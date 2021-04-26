@@ -10,9 +10,9 @@ import base64
 def get_dataset(df):
     csv = df.to_csv(index=False)
     b64 = base64.b64encode(csv.encode()).decode()
-    href = f'<a href="data:file/csv;base64,{b64}">Download</a>'
+    href = f'<a href="data:file/csv;base64,{b64}">Download em csv</a>'
     
-    return st.markdown(href)
+    return st.markdown(href, unsafe_allow_html=True)
 
 # Criando a aplicação 
 st.title("Buscador de ID de anúncios dentro do Catalogo do Mercado Livre")
