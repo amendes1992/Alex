@@ -67,6 +67,7 @@ if button:
     #Mostrando o dataset 
     st.dataframe(dataset)
     
-    #Mostrando só os ids 
-    st.write("Apenas os IDs")
-    st.write(ids)
+    #Fazendo o link para download
+    csv = dataset.to_csv(index=False)
+    b64 = base64.b64encode(csv.encode()).decode()
+    href = f'<a href="data:file/csv;base64,{b64}">Faça download do arquivo</a>
