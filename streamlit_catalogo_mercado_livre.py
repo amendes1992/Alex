@@ -38,6 +38,7 @@ if button:
     
     #Mostrando o total de anúncios 
     st.write("Há o total de **{}** de anúncios deste produto no catálogo".format(catalogy['paging']['total']))
+    
     #Criando variavél e lista 
     ids = []
 
@@ -46,6 +47,15 @@ if button:
     for item in catalogy['results']:
         ids.append(catalogy['results'][i]['item_id'])
         i = i + 1
+    
+    #Criando a variavél e pegando os preços dos anúncios
+    price = []
+    
+    p = 0 
+    
+    for item in catalogy['results']:
+        price.append(catalogy['results'][p]['price'])
+        p = p + 1        
 
     #Criando variavél para pegar os ids dos sellers 
     n = 0 
@@ -74,6 +84,7 @@ if button:
     #Colocando os dados 
     dataset['Ids'] = ids 
     dataset['Sellers'] = sellers_name
+    dataset['Price'] = price
 
     #Mostrando o dataset 
     st.dataframe(dataset)
